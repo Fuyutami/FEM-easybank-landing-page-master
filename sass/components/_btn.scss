@@ -1,0 +1,21 @@
+.btn {
+    font-size: 1.5rem;
+    color: $color-white;
+    background-image: linear-gradient(to right, $color-lime-green, $color-bright-cyan);
+    box-shadow: .2rem .3rem .8rem rgba(0,0,0, .2);
+    border: 0;
+    padding: 1.3rem 3.5rem;
+    border-radius: 500px;
+    // transition: all .1s;
+
+    &:hover {
+        cursor: pointer;
+        opacity: .7;
+    }
+
+    &:active {
+        transform: scale(.98);
+        box-shadow: .1rem .2rem .5rem rgba(0,0,0, .2);
+    }
+
+}
