@@ -1,5 +1,6 @@
 .btn {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+    font-weight: $font-weight-bold;
     color: $color-white;
     background-image: linear-gradient(to right, $color-lime-green, $color-bright-cyan);
     box-shadow: .2rem .3rem .8rem rgba(0,0,0, .2);
@@ -15,7 +16,7 @@
 
     &:active {
         transform: scale(.98);
-        box-shadow: .1rem .2rem .5rem rgba(0,0,0, .2);
+        box-shadow: .1rem .1rem .4rem rgba(0,0,0, .3);
     }
 
 }
