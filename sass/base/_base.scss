@@ -14,5 +14,7 @@ body {
     font-family: 'Public Sans', sans-serif;
     font-size: 1.8rem;
     font-weight: $font-weight-light;
+    color: $color-grayish-blue;
     min-height: 100vh;
+    overflow-x: hidden;
 }

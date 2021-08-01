@@ -1,11 +1,22 @@
-
-.heading-1 {
-    font-size: 5.3rem;
-    font-weight: $font-weight-medium;
+%heading {
     color: $color-dark-blue;
 }
 
+.heading-1 {
+    @extend %heading;
+    font-size: 5.3rem;
+    font-weight: $font-weight-medium;
+    
+}
+
+.heading-2 {
+    @extend %heading;
+    font-size: 3.8rem;
+    font-weight: $font-weight-medium;
+}
+
 .paragraph {
-    line-height: 1.5;
+    font-size: 1.75rem;
+    line-height: 1.55;
     color: $color-grayish-blue;
 }

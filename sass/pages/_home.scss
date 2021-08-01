@@ -10,16 +10,15 @@
     &__content-wrapper {
         width: $content-wrapper-width;
         display: flex;
-        margin: 0 4rem;
     }
 
     &__article {
         padding: 17rem 0;
-        flex-basis: 50%;
+        flex-basis: 40%;
     }
 
     &__images {
-        flex-basis: 50%;
+        flex-basis: 60%;
         position: relative;   
     }
 
@@ -34,4 +33,110 @@
         top: -12rem;
         right: -31rem;
     }
+}
+
+
+.section-features {
+    background-color: $color-light-grayish-blue;
+    
+    @include flex-center;
+
+    &__content-wrapper {
+        width: $content-wrapper-width;
+        padding: 11rem 0;
+    }
+
+    &__text-box {
+        max-width: 65rem;
+        margin-bottom: 7rem;
+    }
+
+    &__features {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    &__feature-box {
+
+        &:not(:last-child) {
+            margin-right: 2rem;
+        }
+    }
+
+    &__feature-icon {
+        margin-bottom: 3rem;
+    }
+
+    &__feature-heading {
+        @extend %heading;
+        font-size: 2.3rem;
+        font-weight: $font-weight-medium;
+        margin-bottom: 3rem;
+    }
+
+
+    &__feature-paragraph {
+        font-size: 1.55rem;
+        line-height: 1.8;
+        color: $color-grayish-blue;
+    }
+}
+
+
+.section-articles {
+    background-color: $color-very-light-gray;
+    @include flex-center;
+
+    &__content-wrapper {
+        width: $content-wrapper-width;
+        padding: 9rem 0;
+    }
+
+    &__articles-container {
+        display: grid;
+        gap: 3rem;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    &__article-card {
+        background-color: $color-white;
+        border-radius: 5px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        box-shadow: .7rem .7rem 1.43em rgba(0, 0, 0, 0.05);
+    }
+
+    &__article-img-container {
+        height: 200px;
+        
+    }
+
+    &__article-img {
+        height: 100%; 
+    }
+
+    &__article-text-content {
+        padding: 2rem;
+    }
+
+    &__article-author {
+        font-size: 1rem;
+        margin-bottom: 1em;
+    }
+
+    &__article-heading {
+        @extend %heading;
+        font-size: 1.5rem;
+        font-weight: $font-weight-medium;
+        line-height: 1.5;
+        margin-bottom: .6rem;
+    }
+
+    &__article-paragraph {
+       font-size: 1.3rem;
+       line-height: 1.5;
+    }
+
 }
