@@ -132,6 +132,11 @@
         font-weight: $font-weight-medium;
         line-height: 1.5;
         margin-bottom: .6rem;
+
+        &:hover {
+            color: $color-lime-green;
+            cursor: pointer;
+        }
     }
 
     &__article-paragraph {
