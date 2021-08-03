@@ -1,13 +1,15 @@
 .header {
+	width: 100vw;
 	height: 80px;
     background-color: $color-white;
     @include flex-center;
-    position: relative;
+    position: fixed;
     z-index: 200;
 
 	&__content-wrapper {
         height: 100%;
         width: $content-wrapper-width;
+		margin: 0 5rem;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
@@ -15,8 +17,13 @@
 	}
 
 	&__navigation {
-		width: 335px;
+		width: 33.5rem;
 		height: 100%;
+
+		@media only screen and (max-width: $bp-small) {
+            display: none;
+        }
+
 
 		&__list {
 			height: 100%;
@@ -61,5 +68,18 @@
 			left: 0;
 			bottom: 0;
 		}
+	}
+	&__btn {
+		@media only screen and (max-width: $bp-small) {
+            display: none;
+        }
+	}
+
+	&__mobile-menu {
+		display: none;
+
+		@media only screen and (max-width: $bp-small) {
+            display: block;
+        }
 	}
 }

@@ -1,37 +1,114 @@
 .content-wrapper {
-    max-width: 1100px;
-    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    position: relative;
 }
 
 .section-about {
     background-color: $color-very-light-gray;
     @include flex-center;
+
+   
     
     &__content-wrapper {
         width: $content-wrapper-width;
+        margin: 0 5rem;
         display: flex;
+
+        @media only screen and (max-width: $bp-small) {
+            flex-direction: column;
+        }
+
     }
 
     &__article {
-        padding: 17rem 0;
+        padding-top: 25rem;
+        padding-bottom: 17rem;
         flex-basis: 40%;
+
+        @media only screen and (max-width: $bp-large) {
+            flex-basis: 50%;
+        }
+        @media only screen and (max-width: $bp-medium) {
+            padding-top: 20rem;
+            padding-bottom: 12rem;
+        }
+
+        @media only screen and (max-width: $bp-small) {
+            text-align: center;
+            padding-top: 0;
+            margin-top: 8rem;
+        }
+        @media only screen and (max-width: $bp-phone) {
+            margin-top: 2rem;
+        }
+
+       
     }
 
     &__images {
         flex-basis: 60%;
-        position: relative;   
+        position: relative; 
+        
+        @media only screen and (max-width: $bp-large) {
+            flex-basis: 50%;
+        }
+
+        @media only screen and (max-width: $bp-small) {
+            order: -1;
+            min-height: 100vw;
+        }
+       
     }
 
     &__bg-img {
+        content: url(../images/bg-intro-desktop.svg);
         position: absolute;
-        top: -26rem;
+        top: -18rem;
         right: -63rem;
+
+        @media only screen and (max-width: $bp-large) {
+            top: -12rem;
+            right: -40rem;
+            width: 800px;
+        }
+
+        @media only screen and (max-width: $bp-medium) {
+            top: -2rem;
+            right: -33rem;
+            width: 600px;
+        }
+
+        @media only screen and (max-width: $bp-small) {
+            content: url(../images/bg-intro-mobile.svg);
+            width: 100vw;
+            top: 0rem;
+            right: -4rem;
+        }
+
     }
 
     &__phone-img {
         position: absolute;
-        top: -12rem;
+        top: -4rem;
         right: -31rem;
+
+        @media only screen and (max-width: $bp-large) {
+            right: -29rem;
+            width: 600px;
+        }
+        @media only screen and (max-width: $bp-medium) {
+            top: 2rem;
+            right: -23rem;
+            width: 450px;
+        }
+
+        @media only screen and (max-width: $bp-small) {
+            right: auto;
+            top: -4rem;
+            width: 100%;
+        }
     }
 }
 
@@ -43,26 +120,44 @@
 
     &__content-wrapper {
         width: $content-wrapper-width;
+        margin: 0 5rem;
         padding: 11rem 0;
+
+        @media only screen and (max-width: $bp-medium) {
+            padding: 9rem 0;
+        }
     }
 
     &__text-box {
         max-width: 65rem;
         margin-bottom: 7rem;
+
+        @media only screen and (max-width: $bp-phone) {
+            text-align: center;
+        }
     }
 
     &__features {
         width: 100%;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+
+        @media only screen and (max-width: $bp-medium) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @media only screen and (max-width: $bp-phone) {
+            grid-template-columns: 1fr;
+            gap: 4rem;
+        }
     }
 
     &__feature-box {
-
-        &:not(:last-child) {
-            margin-right: 2rem;
+        @media only screen and (max-width: $bp-phone) {
+            text-align: center;
         }
     }
+
 
     &__feature-icon {
         margin-bottom: 3rem;
@@ -88,15 +183,32 @@
     background-color: $color-very-light-gray;
     @include flex-center;
 
+    @media only screen and (max-width: $bp-phone) {
+        text-align: center;
+    }
+
     &__content-wrapper {
         width: $content-wrapper-width;
+        margin: 0 5rem;
         padding: 9rem 0;
+
+        @media only screen and (max-width: $bp-medium) {
+            padding: 7rem 0;
+        }
     }
 
     &__articles-container {
         display: grid;
         gap: 3rem;
         grid-template-columns: repeat(4, 1fr);
+
+        @media only screen and (max-width: $bp-medium) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media only screen and (max-width: $bp-phone) {
+            grid-template-columns: 1fr;
+        }
     }
 
     &__article-card {
@@ -108,17 +220,32 @@
         box-shadow: .7rem .7rem 1.43em rgba(0, 0, 0, 0.05);
     }
 
-    &__article-img-container {
+    &__article-img {
         height: 200px;
-        
+        width: 100%;
+        background-size: cover;
+
+        &--robinson-1 {
+            background-image: url(../images/image-currency.jpg);
+        }
+
+        &--hutton-1 {
+            background-image: url(../images/image-restaurant.jpg);
+        }
+
+        &--hutton-2 {
+            background-image: url(../images/image-plane.jpg);
+        }
+
+        &--robinson-2 {
+            background-image: url(../images/image-confetti.jpg);
+        }
     }
 
-    &__article-img {
-        height: 100%; 
-    }
 
     &__article-text-content {
         padding: 2rem;
+        text-align: start;
     }
 
     &__article-author {

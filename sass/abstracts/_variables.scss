@@ -13,6 +13,11 @@ $font-weight-light: 300;
 $font-weight-medium: 400;
 $font-weight-bold: 700;
 
+// RESPONSIVE BREAKPOINTS
+$bp-large: 75em; // 1200px
+$bp-medium: 56.25em; // 900px
+$bp-small: 43.75em; // 700px
+$bp-phone: 31.25em; // 500px
 
 //OTHER
 $content-wrapper-width: 110rem;
