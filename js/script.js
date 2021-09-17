@@ -18,3 +18,10 @@ btnMobileMenu.addEventListener('click', function () {
         iconMobileMenu.src =  'images/icon-hamburger.svg'
     }
 })
+
+window.addEventListener('resize', function () {
+    if (window.innerWidth > 900 && !mobileMenu.classList.contains('hidden')) {
+        mobileMenu.classList.add('hidden')
+        iconMobileMenu.src =  'images/icon-hamburger.svg'
+    }
+})
