@@ -7,7 +7,8 @@
     border: 0;
     padding: 1.3rem 3.5rem;
     border-radius: 500px;
-    // transition: all .1s;
+
+    transition: all .2s;
 
     &:hover {
         cursor: pointer;
@@ -15,7 +16,7 @@
     }
 
     &:active {
-        transform: scale(.98);
+        transform: scale(.95);
         box-shadow: .1rem .1rem .4rem rgba(0,0,0, .3);
     }
 
